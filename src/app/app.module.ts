@@ -8,6 +8,7 @@ import { PayeesModule } from './payees/payees.module';
 import { TransactionsHomeComponent } from './transactions-home/transactions-home.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
 import { DemosModule } from './demos/demos.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DemosModule } from './demos/demos.module';
     BrowserModule,
     AppRoutingModule,
     PayeesModule,
-    DemosModule
+    DemosModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
