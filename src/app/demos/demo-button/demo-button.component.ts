@@ -3,24 +3,21 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-demo-button',
   templateUrl: './demo-button.component.html',
-  styles: []
+  styles: [],
 })
 export class DemoButtonComponent implements OnInit {
-
   @Input()
   label = 'Click me';
 
   @Output()
   action = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   handleClick(event: MouseEvent) {
     console.log('You clicked on the button');
     this.action.emit('Some action happened');
   }
-
 }

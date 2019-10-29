@@ -1,0 +1,7 @@
+<div>
+  <!-- <p>Click here: <app-demo-button (click)="handleClick()" (action)="handleAction()" label="{{'Test me'}}"></app-demo-button> -->
+  <p>Click here:
+    <app-demo-button (click)="handleClick()" (action)="handleAction($event)" [label]="'Test me'">
+    </app-demo-button>
+  </p>
+</div>

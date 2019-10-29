@@ -4,23 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { DemoButtonComponent } from './demo-button/demo-button.component';
 import { PayeesModule } from './payees/payees.module';
 import { TransactionsHomeComponent } from './transactions-home/transactions-home.component';
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
+import { DemosModule } from './demos/demos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    DemoButtonComponent,
     TransactionsHomeComponent,
     CategoriesHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PayeesModule
+    PayeesModule,
+    DemosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
