@@ -1,16 +1,27 @@
+<!-- Observable must return before rendering the table -->
+<!-- <table class="table table-hover" *ngIf="payees$ | async as payees"> -->
+
+<!-- Always true because the observable is defined (not resolved!) at construction time -->
+<!-- <table class="table table-hover" *ngIf="payees$"> -->
+
+<!-- No directives -->
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Payee Name</th>
+      <th>City</th>
       <th>State</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+    <!-- Use the async pipe -->
+    <!-- <tr *ngFor="let payee of payees$ | async "> -->
+
+      <!-- Use a template variable or an instance variable -->
+      <tr *ngFor="let payee of payees">
+      <td>{{ payee.payeeName }}</td>
+      <td>{{ payee.address && payee.address.city }}</td>
+      <td>{{ payee.address && payee.address.state }}</td>
     </tr>
   </tbody>
 </table>

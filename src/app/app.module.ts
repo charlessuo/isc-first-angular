@@ -9,6 +9,7 @@ import { TransactionsHomeComponent } from './transactions-home/transactions-home
 import { CategoriesHomeComponent } from './categories-home/categories-home.component';
 import { DemosModule } from './demos/demos.module';
 import { SharedModule } from './shared/shared.module';
+import { NoHttpModule } from './no-http/no-http.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     PayeesModule,
     DemosModule,
-    SharedModule
+    SharedModule,
+    NoHttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

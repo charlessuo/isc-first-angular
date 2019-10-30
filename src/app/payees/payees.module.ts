@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { PayeesRoutingModule } from './payees-routing.module';
 import { PayeesHomeComponent } from './payees-home/payees-home.component';
@@ -16,7 +17,17 @@ import { PayeesListComponent } from './payees-list/payees-list.component';
     PayeesSearchComponent,
     PayeesListComponent,
   ],
-  imports: [CommonModule, FormsModule, SharedModule, PayeesRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SharedModule,
+    HttpClientModule,
+    PayeesRoutingModule,
+  ],
   exports: [PayeesHomeComponent],
 })
-export class PayeesModule {}
+export class PayeesModule {
+  constructor() {
+    console.log('Created PayeesModule');
+  }
+}

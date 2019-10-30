@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Person } from '../shared/banking-types';
-import { throwError, Observable } from 'rxjs';
+import { Payee } from '../shared/banking-types';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-@Injectable()
-export class DemosDaoService {
-  baseUrl = 'http://localhost:8000/api/v1/banking';
-  people: Person[] = [];
+@Injectable({
+  providedIn: 'root',
+})
+export class PayeesDaoService {
+  baseUrl = 'http://localhost:8000/api/v1/banking/payees?_delay=2000';
 
-  constructor(private http: HttpClient) {}
+  constructor(private client: HttpClient) {}
 
-  // This is "cold" until .subscribe() is called
-  getPeople(): Observable<Person[]> {
-    return this.http
-      .get<Person[]>(`${this.baseUrl}/people`)
-      .pipe(catchError(this.handleError));
+  getPayees() {
+    return this.client.get<Payee[]>(this.baseUrl).pipe(catchError(this.handleError));;
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -32,4 +30,5 @@ export class DemosDaoService {
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
   }
+
 }

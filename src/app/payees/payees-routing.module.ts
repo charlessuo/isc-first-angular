@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PayeesHomeComponent } from './payees-home/payees-home.component';
 import { PayeesManagerComponent } from './payees-manager/payees-manager.component';
 import { PayeesSearchComponent } from './payees-search/payees-search.component';
+import { PayeesListComponent } from './payees-list/payees-list.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,11 @@ const routes: Routes = [
       },
       {
         path: 'list',
-        component: PayeesHomeComponent
+        component: PayeesListComponent
+      },
+      {
+        path: 'detail/:id',
+        component: PayeesListComponent
       },
       {
         path: '',
