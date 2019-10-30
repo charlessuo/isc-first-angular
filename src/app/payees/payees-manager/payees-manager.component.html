@@ -1,2 +1,10 @@
-<p>payees-manager works!</p>
-<router-outlet></router-outlet>
+<section class="row">
+  <div class="col">
+    <div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a [routerLink]="['/payees', 'search']">Search</a></li>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</section>

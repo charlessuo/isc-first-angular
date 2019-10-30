@@ -2,9 +2,9 @@
     <div class="col">
       <h3>Fetching People</h3>
       <p>Click on this button to fetch people: <button type="button" (click)="fetchPeople()">Fetch</button></p>
-      <ul *ngIf="people.length > 0">
-        <li *ngFor="let person of people">
-          {{person.firstName}} {{person.lastName}}
+      <ul *ngIf="people && people.length > 0">
+        <li *ngFor="let person of people; index as i">
+          {{ i + 1 }}) {{person.firstName}} {{person.lastName}}
         </li>
       </ul>
 

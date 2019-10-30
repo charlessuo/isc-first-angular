@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PayeesHomeComponent } from './payees-home/payees-home.component';
 import { PayeesManagerComponent } from './payees-manager/payees-manager.component';
+import { PayeesSearchComponent } from './payees-search/payees-search.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
       },
       {
         path: 'search',
-        component: PayeesHomeComponent
+        component: PayeesSearchComponent
       },
       {
         path: 'list',

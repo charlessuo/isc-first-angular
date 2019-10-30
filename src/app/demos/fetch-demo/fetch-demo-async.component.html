@@ -2,7 +2,8 @@
   <div class="col">
     <h2>Fetching + async pipe</h2>
     <ul>
-      <li *ngFor="let person of people$ | async">
+      <!-- TODO: Add trackBy -->
+      <li *ngFor="let person of people$ | async;">
         {{person.firstName}} {{person.lastName}}
       </li>
     </ul>

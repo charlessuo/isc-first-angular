@@ -4,7 +4,7 @@ import { Person } from 'src/app/shared/banking-types';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-fetch-demo',
+  selector: 'fetch-demo-async',
   templateUrl: './fetch-demo-async.component.html',
   providers: [DemosDaoService],
   styles: [],
